@@ -2160,6 +2160,7 @@ impl From<chain::fragment::FragmentId> for FragmentId {
 #[wasm_bindgen]
 impl FragmentId {
     pub fn calculate(bytes: &[u8]) -> FragmentId {
+        printf("truchq calculate", bytes);
         key::Hash::hash_bytes(bytes).into()
     }
 
