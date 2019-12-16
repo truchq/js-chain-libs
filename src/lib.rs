@@ -2160,7 +2160,7 @@ impl From<chain::fragment::FragmentId> for FragmentId {
 #[wasm_bindgen]
 impl FragmentId {
     pub fn calculate(bytes: &[u8]) -> FragmentId {
-        chain::fragment::FragmentId::hash_bytes(bytes).into()
+        key::Hash::hash_bytes(bytes).into()
     }
 
     pub fn from_bytes(bytes: Uint8Array) -> Result<FragmentId, JsValue> {
